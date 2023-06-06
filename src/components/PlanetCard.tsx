@@ -6,10 +6,10 @@ type PlanetProps = {
 function PlanetCard({ planetName, planetImage }: PlanetProps) {
     return (
       <div data-testid="planet-card">
-        <img src= {planetImage} alt={`Planeta ${planetName}`}> </img>
+        <img src= { planetImage } alt={`Planeta ${planetName}`} />
         <p data-testid="planet-name"> {planetName}</p>
       </div>
     );
-  }
+}
   
-  export default PlanetCard;
+export default PlanetCard;
