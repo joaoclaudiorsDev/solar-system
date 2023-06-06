@@ -7,7 +7,7 @@ function App() {
     <>
       <Header/>
       <SolarSystem/>
-      <Missions />
+      <Missions/>
     </>
   );
 }
