@@ -8,20 +8,22 @@ function Missions() {
         <Title
            headline="Missões"
         />
-    <ul>
-        {
-            missions.map(mission => (
-              <li key={mission.name}>
-                <MissionCard
-                  name = {mission.name}
-                  country = {mission.country}
-                  year = {mission.year}
-                  destination = {mission.destination}
-                />
-              </li>
-            ))
-        }
-    </ul>
+     <div data-testid = "missions-cards"> 
+      <ul>
+          {
+              missions.map(mission => (
+                <li key={mission.name}>
+                  <MissionCard
+                    name = {mission.name}
+                    country = {mission.country}
+                    year = {mission.year}
+                    destination = {mission.destination}
+                  />
+                </li>
+              ))
+          }
+      </ul>
+      </div>  
     </div>  
   ) 
 }

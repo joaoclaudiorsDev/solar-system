@@ -1,3 +1,167 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url('./images/background.jpeg') no-repeat center center fixed;
+  background-size: 100%;
+  color: #fafafa;
+  font-family: Roboto , sans-serif;
+}
+
+body > div {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+header {
+  padding: 48px 0;
+}
+
+div [ data-testid = 'solar-system' ] {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 500px; 
+}
+h1{
+  font-size: 45px;
+}
+h2{
+  font-size: 30px;
+}
+div [ data-testid = 'solar-system' ] h2 {
+  margin-top: 20px;
+  
+}
+
+div [ data-testid = 'solar-system' ] ul {
+  display: flex;
+  gap: 2px;
+  list-style: none;
+  margin: auto 0;
+  max-width: 100%;
+  position: relative;
+}
+
+@keyframes planet {
+
+  from {
+    transform: translateY(-5px);
+  }
+
+  to {
+    transform: translateY(10px);
+  }
+}
+
+div [ data-testid = 'solar-system' ] ul li {
+  align-items: center;
+  animation: planet 2s ease-in-out alternate-reverse infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 999;
+}
+
+li:nth-child( 1 ) img {
+  width: 41px;
+}
+
+li:nth-child( 2 ) img {
+  width: 102px;
+}
+
+li:nth-child( 3 ) img {
+  width: 106px;
+}
+
+li:nth-child( 4 ) img {
+  width: 66px;
+}
+
+li:nth-child( 5 ) img {
+  width: 272px;
+}
+
+li:nth-child( 6 ) img {
+  width: 280px;
+}
+
+li:nth-child( 7 ) img {
+  width: 144px;
+}
+
+li:nth-child( 8 ) img {
+  width: 144px;
+}
+
+div [ data-testid = 'solar-system' ] li p {
   text-align: center;
+}
+
+div [ data-testid = 'missions' ] {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+div [ data-testid = 'missions' ] ul {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  list-style: none;
+  margin-top: 48px;
+  padding-bottom: 24px;
+  width: 100%;
+}
+
+div [ data-testid = 'missions' ] ul li {
+  background-color: #8f64d1;
+  border: 1px solid black;
+  border-radius: 4px;
+  max-width: 550px;
+  padding: 24px;
+  position: relative;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+
+div [ data-testid = 'missions' ] ul li:after {
+  background-color: #fafafa;
+  content: '';
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+div [ data-testid = 'missions' ] ul li:hover {
+  background-color: #8f64d1;
+  border-radius: 4px;
+  max-width: 550px;
+  padding: 24px;
+  position: relative;
+  width: 100%;
+  transform: scale(1.05);
+}
+
+div [ data-testid = 'mission-card' ] {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+div [ data-testid = 'mission-card' ] strong {
+  text-transform: uppercase;
+}
+
+div [ data-testid = 'mission-card' ] .data-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
 }
